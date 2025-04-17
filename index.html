@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AquaSaver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="logo">💧 AquaSaver</h1>
+      <label class="switch">
+        <input type="checkbox" id="darkToggle">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <form id="waterForm">
+      <label>Drinking Water (litres): <input type="number" id="drinking" step="0.1"></label>
+      <label>Shower Time (minutes): <input type="number" id="shower"></label>
+      <label>Toilet Flushes: <input type="number" id="toilet"></label>
+      <label>Cooking Type:
+        <select id="cooking">
+          <option value="10">Light</option>
+          <option value="20">Moderate</option>
+          <option value="35">Heavy</option>
+        </select>
+      </label>
+      <label>Washing Loads: <input type="number" id="washing"></label>
+      <label>Other Uses (litres): <input type="number" id="extra" step="0.1"></label>
+      <button type="submit">🫧 AquaSaver</button>
+    </form>
+
+    <section id="result" class="hidden">
+      <h2>Total Usage: <span id="totalUsage"></span></h2>
+      <canvas id="chart"></canvas>
+      <div id="tips">
+        <h3>💡 Tips</h3>
+        <ul id="tipList"></ul>
+      </div>
+      <p class="ref">Based on CPCB: limit is 135L/day/person.</p>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

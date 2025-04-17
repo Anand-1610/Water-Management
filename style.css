@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eaf6ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#logo.spin {
+  transform: rotate(360deg);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+body.dark form {
+  background: #1e1e1e;
+}
+
+input, select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: #0288d1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0277bd;
+}
+
+.hidden {
+  display: none;
+}
+
+#result {
+  margin-top: 2rem;
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+body.dark #result {
+  background: #263238;
+}
+
+#tips ul {
+  padding-left: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+ul li.highlight {
+  font-weight: bold;
+  color: #00e676;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "🌙";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 22px;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  content: "☀️";
+}
